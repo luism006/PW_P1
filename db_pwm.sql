@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-01-2020 a las 13:57:12
+-- Tiempo de generación: 03-03-2020 a las 12:11:40
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.1
 
@@ -30,24 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `ciudades` (
   `ID_Ciudad` int(11) NOT NULL,
-  `Nombre` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `clientes`
---
-
-CREATE TABLE `clientes` (
-  `ID_Clientes` int(11) NOT NULL,
-  `Nombre` varchar(50) NOT NULL,
-  `Apellido` varchar(50) NOT NULL,
-  `Telefono` int(11) NOT NULL,
-  `Descripcion` text NOT NULL,
-  `ID_Ciudad` int(11) NOT NULL,
-  `Direccion` text NOT NULL,
-  `Horario` datetime NOT NULL
+  `Ciudad` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -108,18 +91,20 @@ CREATE TABLE `modelos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `negocios`
+-- Estructura de tabla para la tabla `registro`
 --
 
-CREATE TABLE `negocios` (
-  `ID_Negocio` int(11) NOT NULL,
-  `Nombre` varchar(50) NOT NULL,
+CREATE TABLE `registro` (
+  `ID_Registro` int(11) NOT NULL,
+  `Compania` varchar(255) NOT NULL,
+  `Nombre` varchar(125) NOT NULL,
+  `Apellido` varchar(125) NOT NULL,
   `Telefono` int(11) NOT NULL,
   `Descripcion` text NOT NULL,
   `ID_Ciudad` int(11) NOT NULL,
-  `Direccion` varchar(160) NOT NULL,
-  `Horario` varchar(150) NOT NULL,
-  `Estado` varchar(15) NOT NULL
+  `Direccion` text NOT NULL,
+  `Horario` datetime NOT NULL,
+  `Estado` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -159,13 +144,6 @@ ALTER TABLE `ciudades`
   ADD PRIMARY KEY (`ID_Ciudad`);
 
 --
--- Indices de la tabla `clientes`
---
-ALTER TABLE `clientes`
-  ADD PRIMARY KEY (`ID_Clientes`),
-  ADD KEY `ID_Ciudad` (`ID_Ciudad`);
-
---
 -- Indices de la tabla `marcadores`
 --
 ALTER TABLE `marcadores`
@@ -190,10 +168,10 @@ ALTER TABLE `modelos`
   ADD PRIMARY KEY (`ID_Modelo`);
 
 --
--- Indices de la tabla `negocios`
+-- Indices de la tabla `registro`
 --
-ALTER TABLE `negocios`
-  ADD PRIMARY KEY (`ID_Negocio`);
+ALTER TABLE `registro`
+  ADD PRIMARY KEY (`ID_Registro`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -204,12 +182,6 @@ ALTER TABLE `negocios`
 --
 ALTER TABLE `ciudades`
   MODIFY `ID_Ciudad` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `clientes`
---
-ALTER TABLE `clientes`
-  MODIFY `ID_Clientes` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `marcadores`
@@ -236,20 +208,10 @@ ALTER TABLE `modelos`
   MODIFY `ID_Modelo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `negocios`
+-- AUTO_INCREMENT de la tabla `registro`
 --
-ALTER TABLE `negocios`
-  MODIFY `ID_Negocio` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `clientes`
---
-ALTER TABLE `clientes`
-  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`ID_Clientes`) REFERENCES `ciudades` (`ID_Ciudad`);
+ALTER TABLE `registro`
+  MODIFY `ID_Registro` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
