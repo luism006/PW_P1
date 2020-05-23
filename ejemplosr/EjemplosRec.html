@@ -1,0 +1,357 @@
+<!--OPCION
+
+                    <div class="col col-xs-2 well text-left" >
+                    <a class="btn btn-danger btn-just-icon btn" data-toggle="modal" data-target="#modalPublicar" data-original-title="" title="Pdf">
+                      <i class="fas fa-file-pdf"></i>
+                    </a>
+                    <a class="btn btn-warning btn-just-icon btn" data-toggle="modal" data-target="#modalPublicar" data-original-title="" title="Csv">
+                        <i class="fas fa-file-csv"></i>
+                    </a>
+                    <a class="btn btn-primary btn-just-icon btn" data-toggle="modal" data-target="#modalPublicar" data-original-title="" title="Excel">
+                      <i class="fas fa-file-excel"></i>
+                    </a>          
+                  </div>-->
+
+                  
+                  
+
+
+ <!-- Inicio Card Chart
+        <div class="row">
+
+           Inicio Dashboard 
+  <div class="col-xl-4 col-lg-12">
+    <div class="card card-chart">
+      <div class="card-header card-chart card-header-warning">
+        <div class="ct-chart" id="dailySalesChart"></div>
+        </div>  
+      <div class="card-body">
+        <h4 class="card-title">Ventas Diarias</h4>
+        <p class="card-category"><span class="text-success"><i class="fa fa-long-arrow-up"></i> 55%  </span> Aumento en ventas.</p>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons">access_time</i> actualizado hace 4 minutos
+        </div>
+      </div>
+    </div>
+  </div>
+  2do Dashboard 
+  <div class="col-xl-4 col-lg-12">
+  <div class="card card-chart">
+    <div class="card-header card-chart card-header-danger">
+      <div class="ct-chart" id="completedTasksChart"></div>
+    </div>  
+    <div class="card-body">
+      <h4 class="card-title">Publicaciones Realizadas</h4>
+      <p class="card-category">Últimas publicaciones</p>
+    </div>
+    <div class="card-footer">
+      <div class="stats">
+        <i class="material-icons">access_time</i> actualizado hace 2 minutos
+
+      </div>
+    </div>
+  </div>
+</div>
+ Fin Dashboard 
+
+ Inicio Card Stats 
+  <div class="col-xl-4 col-lg-12">
+      <div class="card card-stats">
+          <div class="card-header card-header-info card-header-icon">
+            <div class="card-icon">
+                <i class="material-icons">content_copy</i>
+            </div>
+            <p class="card-category">Espacio Utilizado</p>
+            <h3 class="card-title">49/50 <small>GB</small></h3>
+          </div>
+          <div class="card-footer">
+              <div class="stats">
+                  <i class="material-icons text-warning">warning</i>
+                  <a href="#pablo" class="warning-link">Obtener más espacio...</a>
+              </div>
+          </div>
+      </div>
+          2do Card Stats 
+        <div class="col-lg-4 col-lg-12">
+        <div class="card card-stats">
+                <div class="card-header card-header-primary card-header-icon">
+                  <div class="card-icon">
+                    <i class="fa fa-instagram"></i>
+                  </div>
+                  <p class="card-category">Seguidores</p>
+                  <h3 class="card-title">+245</h3>
+                </div>
+                <div class="card-footer">
+                  <div class="stats">
+                    <i class="material-icons">update</i> Recién actualizado
+                  </div>
+                </div>
+              </div>
+      </div>
+  </div>
+ Fin Card Stats 
+-->
+
+
+
+
+
+
+
+                  
+ <!-- Modal de registro (Presentacion de datos)-->
+
+        <!-- Modal y Boton -->
+
+        <!--<form action="" method="post" ectype="miltiplart/form-data">-->
+
+
+        <!-- Button trigger modal -->
+<!--
+<button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong">
+  Agregar
+</button>  -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #202940;">
+          <h5 class="modal-title" id="exampleModalLongTitle">Datos del usuario seleccionado:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="background-color: #202940;">
+       <!-- Modal Body -->
+  
+  
+  
+       
+                      <div class="row">
+                      <!-- Form -->
+  
+                      <div class="col-md-1">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">ID</label>
+                            <input type="text" name="nid" class="form-control" required=""> <!--value="<?php echo $nid;?>"-->
+                          </div>
+                        </div>
+  
+  
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Company</label>
+                            <input type="text" name="Compañia" class="form-control"> <!-- value="<?php echo $Correo;?>"-->
+                          </div>
+                        </div>                        
+  
+                                            
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Correo Electrónico</label>
+                            <input type="email" name="Correo" class="form-control" required=""> <!-- value="<?php echo $Correo;?>"-->
+                          </div>
+                        </div>
+  
+  
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Contraseña</label>
+                            <input type="password" name="Passw" class="form-control" required=""> <!-- value="<?php echo $Passw;?>"-->
+                          </div>
+                        </div>
+                      </div>
+  
+  
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Nombre(s)</label>
+                            <input type="text" name="Nombre" class="form-control" required=""> <!-- value="<?php echo $Nombre;?>"-->
+                          </div>
+                        </div>
+  
+  
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Apellido(s)</label>
+                            <input type="text" name="Apellido" value="<?php echo $Apellido;?>" class="form-control" required="">
+                          </div>
+                        </div>
+                      </div>
+  
+  
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Dirección</label>
+                            <input type="text" name="Dirección" class="form-control" required=""> <!-- value="<?php echo $Dirección;?>"-->
+                          </div>
+                        </div>
+                      </div>
+  
+  
+                      <div class="row">                      
+                        <div class="col-md-4">
+                          <div class="form-group">
+                             <label class="bmd-label-floating">Provincia</label>
+                             <select name="provincias" id="n" class="form-control" required=""> <!--value="<?php echo $provincias;?>"-->
+                                 <option>AZUA</option>
+                                 <option>LA VEGA</option>
+                                 <option>BAHORUCO</option>
+                             </select>                          
+                          </div>
+                        </div>
+                        
+  
+                        <div class="col-md-4">
+                          <div>
+                          <div class="form-group"> 
+                            <label class="bmd-label-floating">Ciudad</label>            
+                            <select name="Ciudades" id="no"  class="form-control" required=""> <!--value="<?php echo $Ciudades;?>"-->
+                                 <option>CONCEPCIÓN DE LA VEGA</option>
+                                 <option>CONSTANZA</option>
+                                 <option>JARABACOA</option>
+                             </select>            
+                              </div> 
+                          </div>
+                        </div>
+  
+  
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Teléfono</label>
+                            <input type="tel" name="Telefono" class="form-control" required=""> <!-- value="<?php echo $Telefono;?>"-->
+                          </div>
+                        </div>
+                      </div>
+  
+  
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label>Descripción</label>
+                            <div class="form-group">
+                              <label class="bmd-label-floating"> A que te dedicas?</label>
+                              <textarea name="Descripción" class="form-control" rows="5" required=""></textarea> <!-- value="<?php echo $Descripción;?>"-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Fin Form-->  
+  
+        </div>
+        <!-- Fin Modal Body-->
+  
+        <!-- Modal Footer-->
+        <div class="modal-footer" style="background-color: #202940;">
+          <button type="submit" class="btn btn-primary" value="btnAgregar"  name="accion">Guardar</button>
+  
+          <button type="submit" class="btn btn-danger" value="btnCancelar"  name="accion">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Fin Modal de registro (Presentacion de datos)-->
+
+
+
+
+
+   Select funcional --OPCION
+   <?php
+    $select = "SELECT * FROM provincias ";
+    $sel_run = mysqli_query($connection,$select);
+
+    if(mysqli_num_rows($sel_run) > 0)
+    {
+        ?>
+        <div class="row">                      
+                    <div class="col-md-4">
+                      <div class="form-group">
+                         <label class="bmd-label-floating">Provincia</label>
+                         <select name="id_provincias" class="form-control" >
+                             <option value="">Seleccione</option>
+                                <?php
+                                foreach($sel_run as $row)
+                                {
+                                ?>
+                             <option value="<?php echo $row['id_provincias']; ?>"><?php echo $row['provincias']; ?></option>
+                                <?php
+                                }
+                                ?>
+                         </select>                          
+                      </div>
+                    </div>
+        <?php
+      }
+      else{
+          echo "No Data Available";
+      }
+  ?>
+
+
+
+
+
+
+
+
+
+
+
+
+  <form method="post" action="inicio.php?action=add&id_mercancias=<?php echo $row["id_mercancias"]; ?>"> 
+    <div class="row">
+     <div class="col-md-4">
+            <div class="card text-center"" style="width: 18rem;">
+            <img <?php echo' class="card-img-top" src="Subidas/'.$row['imagen'].'"  alt="Problema al cargar imagen"'?> >
+                  <div class="card-body">
+                    <h4 class="card-title text-light"><?php echo $row["tipo"]; ?></h4>
+                    <h5 class="card-title text-link">$ <?php echo $row["precio"]; ?></h5>
+                    <form action="edit_panel.php" method="post">
+                    <input type="hidden" name="edit_id" value="<?php echo $row['id_mercancias']; ?>">         
+                  <button type="submit" name="edit_btn" class="btn btn-primary" >
+                      <i class="material-icons">edit</i> Detalle
+                  </button>
+                  </div>
+                </div>
+                </div> 
+                </div> 
+              </form>
+                <?php
+            }
+
+          }
+          else{
+            echo "No Record Found";
+          }                        
+          ?>
+
+
+
+
+
+
+          <form method="post" action="inicio.php?action=add&id_mercancias=<?php echo $row["id_mercancias"]; ?>"> 
+            <div class="card-group">
+              <div class="card text-center">
+                  <img <?php echo' class="card-img-top" src="Subidas/'.$row['imagen'].'"  alt="Problema al cargar imagen"'?> >
+                    <div class="card-body">
+                      <h4 class="card-title text-light"><?php echo $row["tipo"]; ?></h4>
+                        <h5 class="card-title text-link">$ <?php echo $row["precio"]; ?></h5>
+                          <form action="edit_panel.php" method="post">
+                              <input type="hidden" name="edit_id" value="<?php echo $row['id_mercancias']; ?>">   
+                                <button type="submit"  name="edit_btn" class="btn btn-primary"><i class="fas fa-magic mr-1"></i> Detalle</button>  
+                              </button>        
+                            </form>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+
+              
+            </div>
+            </form>
